@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <h2>Tomato Counter</h2>
-      <h1>{tomatoCount}</h1>
+      <h1>{tomatoCount > 0 ? "🍅".repeat(tomatoCount) : `Current Count is ${tomatoCount} tomatoes`}</h1>
       <div className="buttons-container">
         <button onClick={decreaseCount} className="btn">-</button>
         <button onClick={increaseCount} className="btn">+</button>

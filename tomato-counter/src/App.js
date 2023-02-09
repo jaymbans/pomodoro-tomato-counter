@@ -2,15 +2,18 @@ import './style.css';
 import { useState } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [tomatoCount, setTomatoCount] = useState(0);
+
+  const increaseCount = () => setTomatoCount(tomatoCount + 1);
+  const decreaseCount = () => setTomatoCount(tomatoCount - 1);
 
   return (
     <div className="App">
-      <h1>Tomato Counter</h1>
-      {count}
+      <h2>Tomato Counter</h2>
+      <h1>{tomatoCount}</h1>
       <div className="buttons-container">
-        <button className="btn">-</button>
-        <button className="btn">+</button>
+        <button onClick={decreaseCount} className="btn">-</button>
+        <button onClick={increaseCount} className="btn">+</button>
       </div>
     </div>
   );
